@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(express.json());
 async function readData(id: string) {
   const token2 =
-  "EAAVhnpN2v68BRgZB7ZCQWOZBuCD2HyRhdsM76SCK0PrZCJ3u4fwogonZC0nwVsWtfP8ZB0XYnZBrRbCgueVjqdbEY4YWTqZAbibGAynYGcOxjLsmZBkigpnKDZCZCppHsZARBcDfW8c3cBKH5HYFg4vZAC0tCIdFfWkEzZBJnjHbF4e7CnSBdAt9V4rqutaVg3ai11il2InWA4";
+  process.env.FACEBOOK_KEY
   const url = `https://graph.facebook.com/v20.0/${id}/conversations?fields=id,updated_time,participants&access_token=${token2}`;
   const res = await fetch(url);
   const data = await res.json();
