@@ -1,5 +1,5 @@
 import express from "express";
-// import { config } from "dotenv";
+import { config } from "dotenv";
 import cors from "cors";
 
 
@@ -9,7 +9,7 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 
 
-// config({ path: "./config/config.env" });
+config({ path: "./config/config.env" });
 
 
 const app = express();
